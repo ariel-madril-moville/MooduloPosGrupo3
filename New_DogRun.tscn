@@ -1,0 +1,106 @@
+[gd_scene load_steps=6 format=3 uid="uid://dnqs5bk2qwu0u"]
+
+[ext_resource type="Texture2D" uid="uid://cb4mbsfowet1p" path="res://pista.png" id="1_pckcd"]
+[ext_resource type="Texture2D" uid="uid://bpwao36wuduwx" path="res://dog.png" id="2_doacl"]
+[ext_resource type="Script" path="res://Mamifero.gd" id="3_rtwp5"]
+[ext_resource type="Texture2D" uid="uid://cxnwt8y12lcrw" path="res://semafaro.png" id="4_humdc"]
+[ext_resource type="Texture2D" uid="uid://c3ftaq6vn17nl" path="res://faixa.png" id="5_d6slg"]
+
+[node name="Pista" type="Sprite2D"]
+position = Vector2(577.25, 231.25)
+scale = Vector2(1.29528, 1.80196)
+texture = ExtResource("1_pckcd")
+
+[node name="Dog" type="Sprite2D" parent="."]
+position = Vector2(-404.74, -37.8754)
+scale = Vector2(0.172165, 0.132649)
+texture = ExtResource("2_doacl")
+script = ExtResource("3_rtwp5")
+
+[node name="Dog2" type="Sprite2D" parent="."]
+position = Vector2(-404.74, 1.52612)
+scale = Vector2(0.172165, 0.132649)
+texture = ExtResource("2_doacl")
+script = ExtResource("3_rtwp5")
+
+[node name="Dog3" type="Sprite2D" parent="."]
+position = Vector2(-404.74, 42.0376)
+scale = Vector2(0.172165, 0.132649)
+texture = ExtResource("2_doacl")
+script = ExtResource("3_rtwp5")
+
+[node name="Dog4" type="Sprite2D" parent="."]
+position = Vector2(-404.74, 81.4391)
+scale = Vector2(0.172165, 0.132649)
+texture = ExtResource("2_doacl")
+script = ExtResource("3_rtwp5")
+
+[node name="Semafaro" type="Sprite2D" parent="."]
+position = Vector2(-50.3752, -98.3651)
+scale = Vector2(0.188767, 0.108066)
+texture = ExtResource("4_humdc")
+
+[node name="Faixa" type="Sprite2D" parent="."]
+position = Vector2(396.701, -0.416215)
+scale = Vector2(0.969588, 0.98777)
+texture = ExtResource("5_d6slg")
+
+[node name="cpVermelho" type="ColorPickerButton" parent="."]
+offset_left = -65.0
+offset_top = -127.0
+offset_right = -34.0
+offset_bottom = -103.0
+
+[node name="cpAmarelo" type="ColorPickerButton" parent="."]
+offset_left = -65.4559
+offset_top = -107.0
+offset_right = -36.4559
+offset_bottom = -87.0
+
+[node name="cpVerde" type="ColorPickerButton" parent="."]
+offset_left = -66.4559
+offset_top = -92.0
+offset_right = -36.4559
+offset_bottom = -69.0
+
+[node name="lblVisor1" type="Label" parent="."]
+offset_left = -442.568
+offset_top = 133.05
+offset_right = -258.568
+offset_bottom = 156.05
+text = "Aposte em seu Hot Dog"
+
+[node name="lblVisor2" type="Label" parent="."]
+offset_left = -435.0
+offset_top = 162.0
+offset_right = -216.0
+offset_bottom = 215.0
+text = "Dog A - 50.0       Dog B - 20.0
+Dog C - 30.50     Dog D - 40.0"
+
+[node name="lblVisor3" type="Label" parent="."]
+offset_left = -143.019
+offset_top = 133.05
+offset_right = -84.019
+offset_bottom = 156.05
+text = "Aposta:"
+
+[node name="txtEditAposta" type="TextEdit" parent="."]
+offset_left = -165.0
+offset_top = 162.0
+offset_right = -46.0
+offset_bottom = 192.0
+placeholder_text = "Digite o valor"
+
+[node name="lblVisor4" type="Label" parent="."]
+offset_left = 26.8282
+offset_top = 133.05
+offset_right = 66.8282
+offset_bottom = 156.05
+text = "Resultado"
+
+[node name="lblResultado1" type="Label" parent="."]
+offset_left = 30.0
+offset_top = 162.0
+offset_right = 376.0
+offset_bottom = 193.0

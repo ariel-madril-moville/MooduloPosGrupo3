@@ -1,0 +1,100 @@
+[gd_scene load_steps=7 format=3 uid="uid://cbmtf4qflomoh"]
+
+[ext_resource type="Script" path="res://DogRun.gd" id="1_n4cx1"]
+[ext_resource type="Texture2D" uid="uid://cb4mbsfowet1p" path="res://pista.png" id="2_ddk33"]
+[ext_resource type="Texture2D" uid="uid://c3ftaq6vn17nl" path="res://faixa.png" id="3_xvyk1"]
+[ext_resource type="Texture2D" uid="uid://dclj8djoesijq" path="res://cachorro_A.png" id="4_7edaj"]
+[ext_resource type="Texture2D" uid="uid://bv1n6654qaaxq" path="res://cachorro_B.png" id="5_v44r1"]
+[ext_resource type="Texture2D" uid="uid://dfqmg1culjb3v" path="res://cachorro_C.png" id="6_xmdw5"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_n4cx1")
+
+[node name="Pista" type="Sprite2D" parent="."]
+position = Vector2(575.75, 268.25)
+scale = Vector2(1.29415, 2.08431)
+texture = ExtResource("2_ddk33")
+
+[node name="Faixa" type="Sprite2D" parent="."]
+position = Vector2(1102, 268.5)
+scale = Vector2(1, 2.06564)
+texture = ExtResource("3_xvyk1")
+
+[node name="Cachorro_A" type="Sprite2D" parent="."]
+position = Vector2(63.75, 83.75)
+scale = Vector2(0.391, 0.264)
+texture = ExtResource("4_7edaj")
+
+[node name="Cachorro_B" type="Sprite2D" parent="."]
+position = Vector2(63.75, 205)
+scale = Vector2(0.412605, 0.255)
+texture = ExtResource("5_v44r1")
+
+[node name="Cachorro_C" type="Sprite2D" parent="."]
+position = Vector2(63.75, 323)
+scale = Vector2(0.399008, 0.254823)
+texture = ExtResource("6_xmdw5")
+
+[node name="btnIniciar" type="Button" parent="."]
+offset_left = 12.0
+offset_top = 576.0
+offset_right = 114.0
+offset_bottom = 617.0
+text = "Start/Pause"
+
+[node name="btnParar" type="Button" parent="."]
+offset_left = 135.0
+offset_top = 576.0
+offset_right = 237.0
+offset_bottom = 617.0
+text = "Pause"
+
+[node name="lblVisor" type="Label" parent="."]
+offset_left = 613.0
+offset_top = 544.0
+offset_right = 1055.0
+offset_bottom = 583.0
+
+[node name="lblLogo" type="Label" parent="."]
+offset_left = 13.0
+offset_top = 544.0
+offset_right = 66.0
+offset_bottom = 567.0
+text = "MGBet"
+
+[node name="lblPainelSaldo" type="Label" parent="."]
+offset_left = 253.0
+offset_top = 544.0
+offset_right = 449.0
+offset_bottom = 567.0
+text = "Valor de Saldo R$"
+
+[node name="txtEditSaldo" type="TextEdit" parent="."]
+offset_left = 254.0
+offset_top = 576.0
+offset_right = 390.0
+offset_bottom = 616.0
+placeholder_text = "20.00 ou Acima"
+
+[node name="lblPainelAposta" type="Label" parent="."]
+offset_left = 420.0
+offset_top = 544.0
+offset_right = 566.0
+offset_bottom = 567.0
+text = "Valor de Aposta R$"
+
+[node name="txtEditAposta" type="TextEdit" parent="."]
+offset_left = 424.0
+offset_top = 576.0
+offset_right = 560.0
+offset_bottom = 616.0
+placeholder_text = "1.00 ou Acima"
+
+[node name="lblPainel3" type="Label" parent="."]
+offset_left = 613.0
+offset_top = 589.0
+offset_right = 1055.0
+offset_bottom = 628.0
+
+[connection signal="button_down" from="btnIniciar" to="." method="Iniciar"]
+[connection signal="button_down" from="btnParar" to="." method="Parar"]
