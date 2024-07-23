@@ -1,18 +1,28 @@
-extends Animal
+extends Node2D
 
 class_name Mamifero
 
-var cor:String
-var tamanho:float
-var peso: float
-var fala:String
-var velocidade:float = randf_range(5.0, 5.5)
-var raca:String
-
-func _process(delta):
-	possoAndar()
-	pass
+@export var cor:String
+@export var tamanho:float
+@export var peso: float
+@export var fala:String
+@export var velocidade:float = randf_range(5.0, 5.5)
+@export var raca:String
+@export var possocorrer = false
 	
+func _process(delta):
+	if(possocorrer == true):
+		possoAndar()
+	pass
+
 func possoAndar():
 	position += Vector2(velocidade,0)
-	
+
+func Correr():
+	possocorrer = true
+	pass # Replace with function body.
+
+
+func Parar():
+	possocorrer = false
+	pass # Replace with function body.

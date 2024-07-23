@@ -38,6 +38,7 @@ position = Vector2(-50.3752, -98.3651)
 scale = Vector2(0.188767, 0.108066)
 texture = ExtResource("4_humdc")
 script = ExtResource("5_p4kln")
+farolVerde = null
 
 [node name="Faixa" type="Sprite2D" parent="."]
 position = Vector2(396.701, -0.416215)
@@ -110,7 +111,3 @@ offset_top = 196.0
 offset_right = -58.0
 offset_bottom = 219.0
 text = "Start/Pause"
-
-[connection signal="farolFicouVerde" from="Semafaro" to="Dog" method="Correr"]
-[connection signal="farolFicouVermelho" from="Semafaro" to="Dog" method="Parar"]
-[connection signal="button_down" from="btnIniciarPausar" to="Semafaro" method="AcionarBotao"]
