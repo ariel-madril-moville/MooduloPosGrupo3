@@ -112,5 +112,11 @@ offset_bottom = 219.0
 text = "Start/Pause"
 
 [connection signal="farolFicouVerde" from="Semafaro" to="Dog" method="Correr"]
+[connection signal="farolFicouVerde" from="Semafaro" to="Dog2" method="Correr"]
+[connection signal="farolFicouVerde" from="Semafaro" to="Dog3" method="Correr"]
+[connection signal="farolFicouVerde" from="Semafaro" to="Dog4" method="Correr"]
 [connection signal="farolFicouVermelho" from="Semafaro" to="Dog" method="Parar"]
+[connection signal="farolFicouVermelho" from="Semafaro" to="Dog2" method="Parar"]
+[connection signal="farolFicouVermelho" from="Semafaro" to="Dog3" method="Parar"]
+[connection signal="farolFicouVermelho" from="Semafaro" to="Dog4" method="Parar"]
 [connection signal="button_down" from="btnIniciarPausar" to="Semafaro" method="AcionarBotao"]
